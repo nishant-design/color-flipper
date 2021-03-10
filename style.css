@@ -1,0 +1,163 @@
+/* general styling */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #e6e6e6;
+}
+
+/* header */
+
+.header{
+    box-shadow: 0px 0px 15px rgb(105, 105, 105);
+    background: #ffffff;
+}
+
+.header_shutDown{
+    background: #000000;
+}
+
+.header_container{
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: 1em;
+    align-items: center;
+    
+}
+
+.logo{
+    letter-spacing: 0.3em;
+    font-weight: 500;
+    color: rgb(17, 141, 199);
+}
+
+.icon{ 
+    margin-left: 2em;
+    cursor: pointer; 
+}
+
+.reset{ color: darkcyan; }
+.reset:hover{ color: rgb(0, 163, 163); }
+
+.power_off{ color: crimson; }
+.power_off:hover{ color: rgb(255, 27, 72); }
+
+.power_on{ color: green; }
+
+/* -----------x-----------x----------x-------------x */
+
+/* content section */
+.wrapper{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+}
+
+.bg_color{
+    background: #1b1b1b;
+    padding: 0.5em 0.9em;
+    margin-bottom: 1em;
+    border-radius: 8px;
+    color: #ffffff;
+}
+
+.buttons{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btn{
+    padding: 0.3em 2em;
+    cursor: pointer;
+    border: 1px solid #1b1b1b;
+    color: #1b1b1b;
+    border-radius: 8px;
+    background: transparent;
+}
+
+.btn:hover{
+    background: #1b1b1b;
+    color: #ffffff;
+}
+
+.btn:focus{
+    outline: none;
+}
+
+@media (min-width: 800px){
+    .bg_color{
+        padding: 0.7em 3em;
+        font-size: 1.2em;
+    }
+
+    .btn{
+        padding: 0.3em 3em;
+        font-size: 1em;
+        border: 2px solid #1b1b1b;
+    }
+}
+
+@media (min-width: 1000px){
+    .bg_color{
+        padding: 0.7em 3em;
+        font-size: 1.5em;
+    }
+
+    .btn{
+        padding: 0.5em 3em;
+        font-size: 1.1em;
+        letter-spacing: 0.1em;
+        border: 2px solid #1b1b1b;
+    }
+}
+
+#color_code{
+    color: aquamarine;
+}
+
+/* Shut Down */
+
+.black{
+    background: #000;
+}
+
+.template{
+    z-index: 1000;
+    height: calc(100vh - 3.5em);
+    position: absolute;
+    width: 100vw;
+    bottom: 0;
+    background: #000;
+    text-align: center;
+    padding-top: 5em;
+    display: none;
+}
+
+.template_display{
+    display: block;
+}
+
+svg{
+    fill: #e6e6e6;
+    margin-bottom: 20px;
+}
+
+.notice{
+    color: #e6e6e6;
+    font-size: 2em;
+    border: 2px solid #e6e6e6;
+    display: inline-block;
+    padding: 0.2em 0.5em;
+}
