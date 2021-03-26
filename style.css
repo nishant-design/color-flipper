@@ -69,6 +69,7 @@ body{
     margin-bottom: 1em;
     border-radius: 8px;
     color: #ffffff;
+    text-align: center;
 }
 
 .buttons{
@@ -96,6 +97,16 @@ body{
     outline: none;
 }
 
+@media(max-width: 510px){
+    .bg_color span{
+        margin-left: 0;
+    }
+
+    .wrapper{
+        min-width: 68%;
+    }
+}
+
 @media (min-width: 800px){
     .bg_color{
         padding: 0.7em 3em;
@@ -109,19 +120,6 @@ body{
     }
 }
 
-@media (min-width: 1000px){
-    .bg_color{
-        padding: 0.7em 3em;
-        font-size: 1.5em;
-    }
-
-    .btn{
-        padding: 0.5em 3em;
-        font-size: 1.1em;
-        letter-spacing: 0.1em;
-        border: 2px solid #1b1b1b;
-    }
-}
 
 #color_code{
     color: aquamarine;
@@ -142,7 +140,9 @@ body{
     background: #000;
     text-align: center;
     padding-top: 5em;
+    transition: all 1s ease-in-out;
     display: none;
+    
 }
 
 .template_display{
