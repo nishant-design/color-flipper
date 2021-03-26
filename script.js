@@ -61,7 +61,6 @@ const sleepTemplte = document.querySelector(".template");
 powerOffBtn.addEventListener("click", shutOff);
 
 function shutOff(){
-    // header.style.backgroundColor = "#000000"
     header.classList.toggle("header_shutDown");
     powerOffBtn.classList.toggle("power_on");
     sleepTemplte.classList.toggle("template_display");
