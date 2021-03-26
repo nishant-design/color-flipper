@@ -103,7 +103,11 @@ body{
     }
 
     .wrapper{
-        min-width: 68%;
+        min-width: 74%;
+    }
+
+    .btn{
+        padding: 0.5em 2em;
     }
 }
 
