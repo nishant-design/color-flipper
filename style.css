@@ -15,12 +15,12 @@ body{
 .header{
     box-shadow: 0px 0px 15px rgb(105, 105, 105);
     background: #ffffff;
-    z-index: 1000;
+    z-index: 1;
+    transition: all 1s;
 }
 
 .header_shutDown{
     background: #000000;
-    z-index: 1000;
 }
 
 .header_container{
@@ -56,6 +56,7 @@ body{
 
 /* content section */
 .wrapper{
+    z-index: 1;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -63,6 +64,9 @@ body{
     transform: translateX(-50%);
     display: flex;
     flex-direction: column;
+    /* display: none; */
+    opacity: 1;
+    transition: opacity 1s;
 }
 
 .bg_color{
@@ -131,28 +135,43 @@ body{
     color: aquamarine;
 }
 
-/* Shut Down */
+.show_hide{
+    opacity: 0;
+    z-index: 0;
 
-.black{
-    background: #000;
+    display: none;
 }
 
+/* Shut Down */
+
 .template{
-    z-index: 10;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+                                  
     height: calc(100vh - 3.5em);
-    position: absolute;
-    width: 100vw;
-    bottom: 0;
+    width: 100%;
     background: #000;
     text-align: center;
-    padding-top: 5em;
-    transition: all 1s ease-in-out;
-    display: none;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    opacity: 0;
+    transition: all 1s;
+    /* display: none; */
+    z-index: 0;
     
 }
 
 .template_display{
-    display: block;
+    opacity: 1;
+    z-index: 1;
+    /* display: flex; */
 }
 
 svg{

@@ -54,18 +54,20 @@ resetBtn.addEventListener("click", function(){
 
 
 // shutting down
+
+const showHideContent = document.querySelector(".wrapper");
+const powerBtn = document.querySelector(".power_off");
+const template = document.querySelector(".template");
 const header = document.querySelector(".header");
-const powerOffBtn = document.querySelector(".power_off");
-const sleepTemplte = document.querySelector(".template");
 
-powerOffBtn.addEventListener("click", shutOff);
+powerBtn.addEventListener("click", changeView);
 
-function shutOff(){
+function changeView(e){
+    console.log("helloooo")
+    showHideContent.classList.toggle("show_hide");
+    template.classList.toggle("template_display");
     header.classList.toggle("header_shutDown");
-    powerOffBtn.classList.toggle("power_on");
-    sleepTemplte.classList.toggle("template_display");
-    document.body.style.background = "#e6e6e6";
-    colorCode.innerText = "#e6e6e6";
-
 }
+
+
 
